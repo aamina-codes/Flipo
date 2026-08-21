@@ -1,0 +1,293 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    font-family: Arial, Helvetica, sans-serif;
+
+    background:
+        radial-gradient(circle at top left, #24134f, transparent 40%),
+        radial-gradient(circle at bottom right, #102d5c, transparent 40%),
+        #070b1c;
+
+    color: white;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    overflow: hidden;
+}
+
+
+/* Main Container */
+
+.game-container {
+    width: min(900px, 92%);
+    text-align: center;
+}
+
+
+/* Header */
+
+.game-header {
+    margin-bottom: 35px;
+}
+
+.game-header h1 {
+    font-size: 4rem;
+    letter-spacing: 8px;
+
+    background: linear-gradient(
+        90deg,
+        #b56cff,
+        #6dd5ff
+    );
+
+    background-clip: text;
+    color: transparent;
+}
+
+.game-header p {
+    margin-top: 8px;
+    font-size: 1.2rem;
+    color: #c9c7e8;
+    letter-spacing: 3px;
+}
+
+
+/* Game Card */
+
+.game {
+    padding: 45px 35px;
+
+    border-radius: 30px;
+
+    background: rgba(255, 255, 255, 0.06);
+
+    border: 1px solid rgba(255, 255, 255, 0.12);
+
+    backdrop-filter: blur(15px);
+
+    box-shadow:
+        0 25px 80px rgba(0, 0, 0, 0.45);
+}
+
+.game h2 {
+    margin-bottom: 25px;
+    color: #e8e5ff;
+}
+
+
+/* Choice Buttons */
+
+.choices {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+
+    margin-bottom: 40px;
+}
+
+.choice-btn {
+    padding: 15px 30px;
+
+    border: none;
+    border-radius: 15px;
+
+    background: linear-gradient(
+        135deg,
+        #6c3fd1,
+        #277bd9
+    );
+
+    color: white;
+
+    font-size: 1rem;
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.25s;
+}
+
+.choice-btn:hover {
+    transform: translateY(-4px);
+
+    box-shadow:
+        0 10px 25px rgba(91, 116, 255, 0.4);
+}
+
+.choice-btn.selected {
+    outline: 3px solid #ffffff;
+    transform: scale(1.05);
+}
+
+
+/* Coin */
+
+.coin-area {
+    height: 180px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.coin {
+    width: 130px;
+    height: 130px;
+
+    border-radius: 50%;
+
+    background: linear-gradient(
+        145deg,
+        #ffe08a,
+        #d99a16
+    );
+
+    border: 6px solid #f5c34f;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    box-shadow:
+        0 0 25px rgba(255, 200, 60, 0.5),
+        inset 0 0 20px rgba(255, 255, 255, 0.3);
+}
+
+.coin-face {
+    font-size: 4rem;
+}
+
+
+/* Coin Flip Animation */
+
+.coin.flipping {
+    animation: flip 1.8s ease-in-out;
+}
+
+@keyframes flip {
+
+    0% {
+        transform: translateY(0) rotateY(0deg);
+    }
+
+    25% {
+        transform: translateY(-80px) rotateY(360deg);
+    }
+
+    50% {
+        transform: translateY(-120px) rotateY(720deg);
+    }
+
+    75% {
+        transform: translateY(-80px) rotateY(1080deg);
+    }
+
+    100% {
+        transform: translateY(0) rotateY(1440deg);
+    }
+
+}
+
+
+/* Message */
+
+.message {
+    min-height: 30px;
+
+    margin: 15px 0 25px;
+
+    color: #c9c7e8;
+
+    font-size: 1.1rem;
+}
+
+
+/* Flip Button */
+
+.flip-btn,
+.try-again-btn {
+
+    padding: 15px 40px;
+
+    border: none;
+    border-radius: 15px;
+
+    font-size: 1rem;
+    font-weight: bold;
+
+    cursor: pointer;
+
+    color: white;
+
+    background: linear-gradient(
+        135deg,
+        #a64cff,
+        #4776ff
+    );
+
+    transition: 0.25s;
+}
+
+.flip-btn:hover:not(:disabled),
+.try-again-btn:hover {
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 10px 25px rgba(140, 90, 255, 0.45);
+}
+
+.flip-btn:disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+}
+
+
+/* Result */
+
+.result {
+    margin-top: 30px;
+}
+
+.result h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.result p {
+    color: #c9c7e8;
+    margin-bottom: 20px;
+}
+
+.hidden {
+    display: none;
+}
+
+
+/* Mobile */
+
+@media (max-width: 600px) {
+
+    .game-header h1 {
+        font-size: 3rem;
+    }
+
+    .choices {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .choice-btn {
+        width: 200px;
+    }
+
+    .game {
+        padding: 35px 20px;
+    }
+}

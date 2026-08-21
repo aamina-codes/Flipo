@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Flipo — A Coin Toss Game</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <main class="game-container">
+
+        <!-- Game Header -->
+        <header class="game-header">
+            <h1>FLIPO</h1>
+            <p>A Coin Toss Game</p>
+        </header>
+
+
+        <!-- Game Area -->
+        <section class="game">
+
+            <h2>Choose your side</h2>
+
+            <!-- Player Choices -->
+            <div class="choices">
+
+                <button class="choice-btn" id="head-btn" onclick="chooseSide('Head')">
+                    🪙 HEAD
+                </button>
+
+                <button class="choice-btn" id="tail-btn" onclick="chooseSide('Tail')">
+                    🪙 TAIL
+                </button>
+
+            </div>
+
+
+            <!-- Coin -->
+            <div class="coin-area">
+
+                <div id="coin" class="coin">
+                    <div class="coin-face">
+                        🪙
+                    </div>
+                </div>
+
+            </div>
+
+
+            <!-- Status Message -->
+            <div id="message" class="message">
+                Choose Head or Tail to begin!
+            </div>
+
+
+            <!-- Flip Button -->
+            <button id="flip-btn" class="flip-btn" onclick="flipCoin()" disabled>
+                🪙 FLIP!
+            </button>
+
+
+            <!-- Result -->
+            <div id="result" class="result hidden">
+
+                <h2 id="result-title"></h2>
+
+                <p id="result-message"></p>
+
+                <button class="try-again-btn" onclick="resetGame()">
+                    🔄 TRY AGAIN
+                </button>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
