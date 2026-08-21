@@ -49,5 +49,3 @@ Python 3
 random — for the coin toss
 
 time — for the countdown and suspense
-
-### Run 
