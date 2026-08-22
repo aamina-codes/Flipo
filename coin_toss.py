@@ -48,10 +48,10 @@ while True:
         print("\n🎉 YOU WIN! >.<")
     else:
         print("\nCOMPUTER WINS! (@-@)")
-        print("💙 Better luck next time!")
+        print("Better luck next time!")
 
 
-    again = input("\n🔄 Try again? (Y/N): ").upper()
+    again = input("\nTry again? (Y/N): ").upper()
 
     if again != "Y":
         print("\nThanks for playing Flipo! 🪙 ✨")
