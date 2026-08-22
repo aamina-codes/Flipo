@@ -39,7 +39,7 @@ while True:
     print("1...")
     time.sleep(1)
 
-    print("\n🪙 And the coin landed on...")
+    print("\n And the coin landed on...")
     time.sleep(2)
 
     print(f"✨ {toss}! ✨")
@@ -54,5 +54,5 @@ while True:
     again = input("\nTry again? (Y/N): ").upper()
 
     if again != "Y":
-        print("\nThanks for playing Flipo! 🪙 ✨")
+        print("\nThanks for playing Flipo! ✨")
         break
