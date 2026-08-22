@@ -142,7 +142,7 @@ function showResult(result) {
 
 
     message.textContent =
-        `The coin landed on ${result}! 🪙`;
+        `The coin landed on ${result}! `;
 
 
     resultBox.classList.remove("hidden");
@@ -162,7 +162,7 @@ function showResult(result) {
             "💻 COMPUTER WINS!";
 
         resultMessage.textContent =
-            "💙 Better luck next time! You've got this!";
+            "Better luck next time! You've got this!";
 
     }
 }
